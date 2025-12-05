@@ -1,5 +1,5 @@
 package com.senai.backend.hospital.controllers;
 
-public class AgendaController {
+public class TratamentoController {
     
 }
