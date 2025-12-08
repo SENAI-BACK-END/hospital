@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.senai.backend.hospital.models.CargaHoraria;
 
-
 @Repository
 public interface CargaHorariaRepository extends JpaRepository<CargaHoraria, Integer>{
     

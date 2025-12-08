@@ -26,21 +26,21 @@ public class Paciente {
     @Column(name="status")
     private boolean status;
 
-    @Column(name="dataHoraCriacao")
+    @Column(name="data_hora_criacao")
     private LocalDateTime dataHoraCriacao;
 
-    @Column(name="dataHoraAtualizacao")
+    @Column(name="data_hora_atualizacao")
     private LocalDateTime dataHoraAtualizacao;
 
-    @OneToMany(mappedBy="agendamento")
+    @OneToMany(mappedBy="paciente")
     private List<Agendamento> agendamentos;
 
     public Paciente() {
     }
 
     public Paciente(LocalDateTime dataHoraAtualizacao, LocalDateTime dataHoraCriacao, Integer id, String nome, boolean status, List<Agendamento> agendamentos) {
-        this.dataHoraAtualizacao = dataHoraAtualizacao;
-        this.dataHoraCriacao = dataHoraCriacao;
+        this.dataHoraAtualizacao = LocalDateTime.now();
+        this.dataHoraCriacao = LocalDateTime.now();
         this.id = id;
         this.nome = nome;
         this.status = true;

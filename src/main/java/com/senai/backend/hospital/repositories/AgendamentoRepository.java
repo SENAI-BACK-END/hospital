@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.senai.backend.hospital.models.Agendamento;
 
 @Repository
-public interface AgendamentoRepository extends JpaRepository<Agendamento, Integer>{
+public interface AgendamentoRepository extends JpaRepository<Agendamento, Integer> {
     
 }

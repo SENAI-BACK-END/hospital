@@ -3,7 +3,6 @@ package com.senai.backend.hospital.models;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import ch.qos.logback.core.status.Status;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -16,7 +15,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-
+import com.senai.backend.hospital.enums.Status;
 
 @Entity
 @Table(name="agendamento")
@@ -37,7 +36,7 @@ public class Agendamento {
     @Column(name="status")
     private Status status;
 
-    @OneToMany(mappedBy="tratamento")
+    @OneToMany(mappedBy="agendamento")
     private List<Tratamento> tratamentos;
 
     @ManyToOne

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.senai.backend.hospital.dto.AgendamentoRequestDTO;
+import com.senai.backend.hospital.dto.AgendamentoResponseDTO;
 import com.senai.backend.hospital.models.Agendamento;
 import com.senai.backend.hospital.services.AgendamentoService;
 
@@ -25,7 +27,7 @@ public class AgendamentoController {
     
     // salvar - POST
     @PostMapping("/salvar")
-    public Agendamento salvar(@RequestBody Agendamento agendamento) {
+    public AgendamentoResponseDTO salvar(@RequestBody AgendamentoRequestDTO agendamento) {
         return agendamentoService.salvar(agendamento);
     }
 
